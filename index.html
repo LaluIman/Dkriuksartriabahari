@@ -7,12 +7,9 @@
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
     <meta property="og:site_name" content="Dkriuk Satria Bahari" /> <!-- website name -->
-    <meta property="og:site" content="" /> <!-- website link -->
     <meta property="og:title" content="Surga Ayam Goreng Renyah yang Menggoda Selera!" /> <!-- title shown in the actual shared post -->
     <meta property="og:description" content="Ayam goreng kami digoreng dengan sempurna hingga menghasilkan tekstur luar yang super kriuk dan daging yang juicy di dalam." /> <!-- description shown in the actual shared post -->
     <meta property="og:image" content="src/img/favicon2.png" /> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-
     <title>D'kriuk Satria Bahari | Pasmoen | Paski | Taman Rahayu | Kabandungan1</title>
     <link rel="stylesheet" href="src/output.css">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
@@ -32,7 +29,7 @@
             <img src="src/img/logo.png" class="h-10" alt="Flowbite Logo" />
             <span><h2 class="font-bold text-yellow-300 leading-tight">Satria <br> Bahari</h2></span>
           </a>
-          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 border" aria-controls="navbar-default" aria-expanded="false">
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 border-2" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -41,25 +38,37 @@
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lgbg-red-600 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
               <li>
-                <a href="#Beranda" class="block py-2 px-3 text-white md:p-0 rounded" aria-current="page">Beranda</a>
+                <a href="#Beranda" class="block py-2 px-3 text-white md:p-0 rounded close-nav" aria-current="page">Beranda</a>
               </li>
               <li>
-                <a href="#cabang" class="block py-2 px-3 text-white md:p-0 rounded" aria-current="page">Cabang</a>
+                <a href="#cabang" class="block py-2 px-3 text-white md:p-0 rounded close-nav" aria-current="page">Cabang</a>
               </li>
               <li>
-                <a href="#menu" class="block py-2 px-3 text-white md:p-0 rounded" aria-current="page">Menu</a>
+                <a href="#menu" class="block py-2 px-3 text-white md:p-0 rounded close-nav" aria-current="page">Menu</a>
               </li>
               <li>
-                <a href="#kontak" class="block py-2 px-3 text-white md:p-0 rounded" aria-current="page">Kontak</a>
+                <a href="#kontak" class="block py-2 px-3 text-white md:p-0 rounded close-nav" aria-current="page">Kontak</a>
               </li>
               <div class="flex-grow border-t border-gray-400 md:hidden mb-2"></div>
               <li class="">
-                <a href="about.html" class="block py-2 px-3 text-white md:p-0 p-2 bg-red-500 md:bg-transparent rounded" aria-current="page">Tentang</a>
+                <a href="about.html" class="block py-2 px-3 text-white md:p-0 p-2 bg-red-500 md:bg-transparent rounded close-nav" aria-current="page">Tentang</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+
+      <script>
+        // navbar closing when press
+            const closeLinks = document.querySelectorAll('.close-nav');
+
+            closeLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                const navbar = document.getElementById('navbar-default');
+                navbar.classList.add('hidden');
+                });
+            });
+      </script>
     <!-- navbar -->
 
     <!-- Hero -->
@@ -76,7 +85,7 @@
                 <p class="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl">
                     <span class="font-extrabold">Jagonya kriuk asli indonesia</span>, Ayam goreng kami digoreng dengan sempurna hingga menghasilkan tekstur luar yang super kriuk dan daging yang juicy di dalam.
                 </p>
-                <a href="#menu" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-sm md:text-xl font-medium text-center text-yellow-300 border-white border-2 rounded-lg bg-primary-700 hover:bg-red-700">
+                <a href="#menu" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-sm md:text-xl font-semibold text-center text-white border-white border-2 rounded-lg bg-primary-700 hover:bg-red-700">
                     Cek menu sekarang!
                     <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
